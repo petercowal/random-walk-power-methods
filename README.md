@@ -10,4 +10,4 @@ These scripts reproduce the experiments described in **Section 2.5 - Numerical R
 
 - **`example_barbell.py`** reproduces results from **Section 2.5.2 – Barbell Example**
 
-- **`example_barbell_big.py`** and **`example_sparse.py`** reproduce results from **Section 2.5.2 – Barbell Example**
+- **`example_barbell_big.py`** and **`example_sparse.py`** reproduce results from **Section 2.5.3 – Application to large sparse matrices**
