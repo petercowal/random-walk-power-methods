@@ -1,8 +1,8 @@
-## Code for: From Random Walks to Faber Polynomials and Accelerated Power Methods
+## Code for: Random Walks, Faber Polynomials and Accelerated Power Methods
 
 **Authors:** Peter Cowal, Nicholas F. Marshall, Sara Pollock  
 
-**arXiv preprint:** TBA
+**arXiv preprint:** https://arxiv.org/pdf/2510.24608
 
 These scripts reproduce the experiments described in **Section 2.5 - Numerical Results**.
 
