@@ -2,6 +2,7 @@ import numpy as np
 from general_power_methods import momentum_general, momentum_dynamic
 import matplotlib.pyplot as plt
 import scipy.sparse as spspr
+from scipy.io import savemat
 np.random.seed(0)
 
 # uncomment for LaTeX style formatting
@@ -44,6 +45,8 @@ print("normalizing columns")
 Dinv = spspr.diags(1/np.sum(B, axis=0))
 
 A = B @ Dinv
+
+savemat(f"barbell_N{N}_p{int(1/p)}.mat", {"A": A, "N": N, "p": p})
 
 # iteration count
 iter = 1000
