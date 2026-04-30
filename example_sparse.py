@@ -84,17 +84,18 @@ plt.semilogy(iters, errs3, '-', marker='^', markevery=iter//10, label = 'dynamic
 plt.semilogy(iters, errs4, '-', marker='s', markevery=iter//10, label = 'dynamic 4')
 plt.semilogy(iters, errs5, '-', marker='*', markevery=iter//10, label = 'dynamic 2-3')
 
+
 # plot theoretical asymptotic convergence as well
-#asympt2 = np.pow(1+np.sqrt(2*spectral_gap), -iters)
-#plt.semilogy(iters, asympt2 * errs2[-1]/asympt2[-1], '--', label = r"$O((1+\sqrt{2\varepsilon})^{-N})$")
+asympt3 = np.pow(1+np.sqrt(spectral_gap), -iters)
+plt.semilogy(iters, asympt3 * errs3[200]/asympt3[200], '--', label = r"$O((1+\sqrt{\varepsilon})^{-N})$")
 
-#asympt3 = np.pow(1+np.sqrt(spectral_gap), -iters)
-#plt.semilogy(iters, asympt3 * errs3[-1]/asympt3[-1], '--', label = r"$O((1+\sqrt{\varepsilon})^{-N})$")
+asympt4 = np.pow(1+np.sqrt(2*spectral_gap/3), -iters)
+plt.semilogy(iters, asympt4 * errs4[200]/asympt4[200], '--', label = r"$O((1+\sqrt{2\varepsilon/3})^{-N})$")
 
-#asympt4 = np.pow(1+np.sqrt(2*spectral_gap/3), -iters)
-#plt.semilogy(iters, asympt4 * errs4[-1]/asympt4[-1], '--', label = r"$O((1+\sqrt{2\varepsilon/3})^{-N})$")
+asympt5 = np.pow(1+np.sqrt(4*spectral_gap/3), -iters)
+plt.semilogy(iters, asympt5 * errs5[200]/asympt5[200], '--', label = r"$O((1+\sqrt{4\varepsilon/3})^{-N})$")
 
-#plt.ylim(1e-10, 10)
+plt.ylim(1e-14, 10)
 
 plt.legend()
 plt.xlabel("n")
